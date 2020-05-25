@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Sign Up">
+    <link rel="icon" href="/images/favicon.ico">
+    <title>Edit</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+    <link href="/css/signin.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <form action="/api/url/<%=url.id%>" method="post"
+          class="form-signin" id="myform">
+      <h2>Edit Url</h2>
+
+      <div class="form-group">
+      <label for="editTitle" class="sr-only">
+        Full Url
+      </label>
+      <input type="text" name="fullUrl" id="editTitle" class="form-control" value="<%=url.fullUrl%>"
+       placeholder="<%=url.fullUrl%>" required autofocus>
+      </div>
+      <button type="submit" class="btn btn-sm btn-block">
+          Submit Edit
+      </button>
+    </form>
+  </body>
+</html>

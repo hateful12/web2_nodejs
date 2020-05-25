@@ -1,0 +1,39 @@
+<main role="main">
+        <div class="album py-5 bg-light">
+            <h2 style="text-align: center; color: darkred">
+                Available urls
+            </h2>
+            <div class="container">
+
+                <div class="row">
+
+
+                        <ol>
+                            <hr>
+                            <% for(let i = 0; i != urls.length; i++) { %>
+                                <li>
+                                    <div class="card-body">
+                                        <h6> <strong>Minified url:</strong> <a href="<%= urls[i].url%>"style="color: blue">
+                                                <%= urls[i].url %>
+                                            </a>
+                                        </h6>
+                                        <h6> <strong>Full Url: </strong> <a style="color: blue"><%= urls[i].fullUrl %><a/></h6>
+                                        <h6> <strong>Created: </strong><t style="color: darkgreen" ><%= urls[i].created%></t></h6>
+                                        <a href="/edit/<%=urls[i].id%>">
+                                            <button class="btn btn-sm btn-block">
+                                            Edit
+                                            </button>
+                                        </a>
+                                        <a href="/api/url/d/<%=urls[i].id%>">
+                                            <button class="btn black btn-sm btn-block">
+                                                Delete
+                                            </button>
+                                        </a>
+                                    </div>
+                                </li>
+                            <% } %>
+                        </ol>
+                </div>
+            </div>
+        </div>
+</main>
